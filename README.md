@@ -8,11 +8,17 @@ It will run at port 8080
 
 Intstall postman and open it
 
-Http method: POST
-url: http://localhost:8080/countries/all
-
-
-Http method: GET 
-url: http://localhost:8080/countries/load
-click send, then the api send the empty array as reponse
-
+# Load data to DB
+  set content type
+  ![](./images/setContentType.png)
+  send data in body
+  ![](./images/loadData.png)
+  
+# Get data
+  ![](./images/getData.png)
+  
+# Delete
+  ![](./images/deleteByCountry.png)
+  
+# Update
+  ![](./images/updateById.png)
