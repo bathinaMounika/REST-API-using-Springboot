@@ -24,7 +24,7 @@ public class CountryController {
     @Autowired
     private CountryJpaRepository countryJpaRepository;
 
-    @GetMapping(value="/all")
+    @GetMapping
     public List<Countries> findAll(){
        return  countryJpaRepository.findAll();
     }
@@ -34,13 +34,13 @@ public class CountryController {
         return countryJpaRepository.findByName(name);
     }
 
-    @PostMapping(value = "/load")
+    @PostMapping
     public Countries load(@RequestBody final Countries countries) {
         countryJpaRepository.save(countries);
         return countryJpaRepository.findByName(countries.getName());
     }
 
-    @DeleteMapping(value = "/delete/{name}")
+    @DeleteMapping(value = "/{name}")
     public List<Countries> delete(@PathVariable final String name){
         countryJpaRepository.delete(countryJpaRepository.findByName(name));
         return countryJpaRepository.findAll(); 
