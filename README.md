@@ -1,7 +1,7 @@
 # REST-API-using-Springboot
 
-clone the code
-open in VS code
+clone the code,
+open in VS code,
 click on Run
 
 It will run at port 8080
