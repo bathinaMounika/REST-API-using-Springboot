@@ -1,0 +1,23 @@
+# server.port=8991
+spring:
+    datasource:
+        url: jdbc:postgresql://localhost:5432/postgres
+        username: postgres
+        password: postgres
+        #keep the connection alive if idle for a long time(needed in production)
+        # test-while-idle: true
+        # validationQuery: SELECT 1
+    # show or not log for each sql query
+    jpa:
+        show-sql: true
+        #Hibernate ddl auto (create, create-drop, update)
+        hibernate:
+            ddl-auto: update
+            #Naming strategy
+            # naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+            # properties:
+            #     hibernate:
+            #         dialect: org.hibernate.dialect.MySQL5Dialect
+            # jdbc:
+            #     lob:
+            #         non_contextual_creation: true
